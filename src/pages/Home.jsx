@@ -1,8 +1,15 @@
-import React from 'react'
 
+import {Box} from "@mui/material"
+import Exercises from "../componenet/Exercises"
+import HeroBanner from "../componenet/HeroBanner"
+import SearchExercises from "../componenet/SearchExercises"
 function Home() {
   return (
-    <div>Home</div>
+    <Box>
+      <HeroBanner />
+      <SearchExercises />
+      <Exercises />
+    </Box>
   )
 }
 
