@@ -6,7 +6,7 @@ function BodyPart({item, setBodyPart, bodyPart}) {
     <Stack
         type="button"
         alignItems='center'
-        justifyContent="cener"
+        justifyContent='center'
         className='bodyPart-card'
 
         sx={{

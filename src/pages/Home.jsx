@@ -13,7 +13,7 @@ function Home() {
     <Box>
       <HeroBanner />
       <SearchExercises setExercices={setExercices}  badyPart={badyPart} setBodyPart={setBodyPart} />
-      <Exercises setExercices={setExercices}  badyPart={badyPart} setBodyPart={setBodyPart} />
+      <Exercises setExercices={setExercices}  exercices={exercices} setBodyPart={setBodyPart} />
     </Box>
   )
 }
