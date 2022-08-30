@@ -5,7 +5,7 @@ import {exerciseOptions, FetcheData } from "../utile/FeatchData"
 import ExerciseCard from './ExerciseCard';
 
 
-function Exercises({setExercices, exercices}) {
+function Exercises({setExercices, exercices, badyPart}) {
 
   const [currentPage, setCurrentPage] = useState(1)
   const exerciscesParPage = 9
@@ -20,6 +20,22 @@ function Exercises({setExercices, exercices}) {
 
       window.scrollTo({top:1800, behavior:'smooth'})
   }
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
+
+      if (badyPart === 'all') {
+        exercisesData = await FetcheData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      } else {
+        exercisesData = await FetcheData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${badyPart}`, exerciseOptions);
+      }
+
+      setExercices(exercisesData);
+    };
+
+    fetchExercisesData();
+  }, [badyPart]);
   
   return (
     <Box id="exercise" ex={{mt:{lg:'110px'}}} mt="50px" p='20px' >
