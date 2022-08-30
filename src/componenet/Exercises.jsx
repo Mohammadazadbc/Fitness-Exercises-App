@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Exercises() {
+function Exercises({exercices}) {
   return (
     <div>Exercises</div>
   )
