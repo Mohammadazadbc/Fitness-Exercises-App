@@ -5,6 +5,7 @@ import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu"
 
 import LeftArrowIcon from "../assets/icons/left-arrow.png"
 import RightArrowIcon from "../assets/icons/right-arrow.png"
+import ExerciseCard from "./ExerciseCard"
 
 const LeftArrow =()=>{
     const {scrollPrev}= useContext(VisibilityContext);
