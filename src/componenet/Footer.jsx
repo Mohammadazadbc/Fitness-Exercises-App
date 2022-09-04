@@ -8,7 +8,7 @@ function Footer() {
       <Stack 
         gap='40px' alignItems='center' px="40px" pt='24px'>
           <img src={logo} alt='' width='200px' height='40px' />
-          <Typography variant='h5' pb='40px' mt='20px' > Made with by Azad </Typography>
+          <Typography variant='h5' pb='40px' mt='20px' > Made by Azad </Typography>
         </Stack>
 
     </Box>
